@@ -23,7 +23,7 @@ You can find your firebaseConfig data in the [Firebase’s Console](https://cons
 ![add firebase web](https://i1.wp.com/javebratt.com/wp-content/uploads/2016/10/console.png?w=1320&ssl=1)
 ```javacript
 // Import the AF2 Module
-import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -43,7 +43,7 @@ export const firebaseConfig = {
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig)
     ...
 ```
 
