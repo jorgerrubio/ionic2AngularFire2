@@ -3,20 +3,15 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { AngularFireModule/*, AuthProviders, AuthMethods*/ } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyCmF0icC4LJlPueUKBBxMKQHy8Nb5jj9Ng",
-  authDomain: "fireblogger-e4b20.firebaseapp.com",
-  databaseURL: "https://fireblogger-e4b20.firebaseio.com",
-  storageBucket: "fireblogger-e4b20.appspot.com",
-  messagingSenderId: "127011656578"
+export const firebaseConfig = { // change four your firebase config web https://console.firebase.google.com/
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  storageBucket: "",
+  messagingSenderId: ""
 };
-
-// const myFirebaseAuthConfig = {
-//   provider: AuthProviders.Password,
-//   method: AuthMethods.Password
-// }
 
 @NgModule({
   declarations: [
@@ -25,7 +20,7 @@ export const firebaseConfig = {
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig/*, myFirebaseAuthConfig*/)
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

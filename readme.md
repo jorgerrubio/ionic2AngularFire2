@@ -20,7 +20,7 @@ $ npm install firebase angularfire2 --save
 ###Import & Initialize
 You can open your app.module.ts and import everything we’ll be using, this is the only time you’ll see this file
 You can find your firebaseConfig data in the [Firebase’s Console](https://console.firebase.google.com/).
-[add firebase web](https://i1.wp.com/javebratt.com/wp-content/uploads/2016/10/console.png?w=1320&ssl=1)
+![add firebase web](https://i1.wp.com/javebratt.com/wp-content/uploads/2016/10/console.png?w=1320&ssl=1)
 ```javacript
 // Import the AF2 Module
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
@@ -46,5 +46,4 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
     ...
 ```
-
 
