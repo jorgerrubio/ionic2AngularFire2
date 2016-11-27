@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Jobs
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="createJob()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let job of jobs | async">
+      <ion-item>
+        <h2>{{job.name}}</h2>
+        <p>{{job.job}}</p>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button icon-only color="danger" (click)="delete(job.$key)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+        <button ion-button icon-only color="success" (click)="editJob(job)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

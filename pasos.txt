@@ -1,0 +1,28 @@
+create new proyect
+ionic start nameapp blank --v2
+
+install dependencias and angularfire2
+npm install @types/request@0.0.30 --save-dev --save-exact
+npm install firebase angularfire2 --save
+
+añadir a src/app/app.module.ts
+
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+
+// la configuarcion se puede encontrar en https://console.firebase.google.com/ settings/add firebase to your web app
+export const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  storageBucket: "",
+  messagingSenderId: ""
+};
+
+const myFirebaseAuthConfig = {
+  provider: AuthProviders.Password,
+  method: AuthMethods.Password
+}
+
+luego agregar la inicialización de @NgModule imports
+
+AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
